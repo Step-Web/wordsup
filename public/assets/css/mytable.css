@@ -1,0 +1,89 @@
+@charset "UTF-8";
+#oTable .btn { text-wrap: nowrap;  }
+#oTable { border: 1px solid #dde2e6!important;}
+.mytable-top-panel, .mytable-bottom-panel { display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; }
+
+.mytable-top-panel > div, .mytable-bottom-panel > div { position: relative; }
+
+.mytable-top-panel > div:first-child, .mytable-bottom-panel > div:first-child { margin-right: auto; }
+
+.mytable-top-panel > div:last-child, .mytable-bottom-panel > div:last-child { margin-left: auto; }
+
+.mytable-top-panel { flex-flow: wrap-reverse; }
+
+.mytable-top-panel > div { margin: 5px 0; }
+
+.mytable-bottom-panel { background: #fff; color: #0b2242; padding: 5px 7px; border: 1px solid #dde2e6; border-top: none}
+
+.mytable-bottom-panel .mytable-total { font-weight: bold; }
+
+.mytable-bottom-panel .mytable-total small { font-weight: normal; }
+
+.mytable { margin-bottom: 0; }
+
+.mytable th { background: #fff; color: #0b2242; font-size: 0.8em; text-transform: uppercase; position: relative; border-left: 1px solid #dde2e6; }
+
+.mytable th:not(.no-sort) { padding-left: 18px; cursor: pointer; }
+
+.mytable th:not(.no-sort)::after { content: "\e943"; font-family: 'icomoon' !important; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; position: absolute; left: 5px; top: 1em; opacity: 0.4; font-size: 1em; }
+
+.mytable th:not(.no-sort):hover { background-color: #fff; }
+.mytable th.rating{ padding-left:5px!important;}
+.mytable th.rating::after{ left:0}
+
+.mytable th.sorted { background: #f8fafc !important;  }
+
+.mytable th.sorted::after { color: #0c70e2; opacity: 1; }
+
+.mytable th.sorted[data-order="1"]::after { content: "\e942"; }
+
+.mytable th.sorted[data-order="-1"]::after { content: "\e941"; }
+
+.mytable th input[type="checkbox"], .mytable th input[type="radio"] { border-color: #ced4da; }
+
+.mytable th.progress-text::before { content: "Прогресс"; }
+
+.mytable th, .mytable td { vertical-align: middle; padding: 0.6rem 0.4rem; }
+
+.mytable td { vertical-align: middle; }
+
+.mytable td .word { font-weight: bold; font-size: 1.1em; color: #0b2242; line-height: 1em; }
+
+.mytable td .ts:not(:empty) { color: #adb5bd; font-size: .9em; position: relative; display: inline-block; line-height: 1em; margin-left: 5px;white-space: nowrap; }
+
+.mytable td .ts:not(:empty)::before, .mytable td .ts:not(:empty)::after { position: absolute; width: 10px; height: 10px; color: #adb5bd; }
+
+.mytable td .ts:not(:empty)::before { content: "["; left: -5px; }
+
+.mytable td .ts:not(:empty)::after { content: "]"; right: -5px; text-align: right; }
+
+.mytable td .translate { color: #6c757d; }
+
+.full-width .mytable-top-panel { padding: 0 10px; }
+
+.full-width .btn-group > .btn:not(.btn-last) { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.mytable td .dropdown-menu-end { padding: 0!important; }
+.mytable .editRow span,.mytable .delRow span{padding:0.4em!important; display: inline-block; font-weight: normal!important; font-family: "Roboto", sans-serif;}
+
+
+@media only screen and (min-width: 764px) { .mytable .dropdown-toggle { display: none; }
+  .mytable .dropdown-menu { display: inline-flex; align-items: center; justify-content: end; position: relative; border: none; cursor: pointer; box-shadow: none; z-index: 0; padding: 0; overflow: hidden; min-width: 1rem; }
+  .mytable .dropdown-menu li { width: 50px; border: 1px solid #e9ecef; }
+  .mytable .dropdown-menu li:last-child { border-left: none; }
+  .mytable .dropdown-menu span { display: none; }
+  .mytable .wordblock { font-size: 1.1em; }
+  .mytable .wordblock .word { width: 100%; }
+
+}
+
+@media only screen and (max-width: 540px) { .mytable th.progress-text::before { content: ""; }
+    .mywordlist .table-responsive{ margin: 0 -10px}
+    .mytable td .translate { font-size: 0.9em; line-height: 1.2em;  }
+    .mytable td .word { font-size:0.9em;}
+    .mytable td { padding-left: 0.2em;padding-right: 0.1em }
+    .mytable td .che{ margin-left: 4px;}
+    .mytable .btn-group { color: #6c757d; }
+    .mytable td .btn-group .btn { padding:0.35rem 0.4rem; }
+    .mytable th.progress-text{ padding-left: 5px; }
+  .mytable th.progress-text::after { left: 3px; }
+  .mywordlist .mytable-top-panel > div:last-child, .mywordlist .mytable-top-panel > div:first-child { width: 100%; } }

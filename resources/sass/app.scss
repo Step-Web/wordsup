@@ -1,0 +1,179 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+.block.pt-1{ padding-top: 0.1em!important;}
+.userpic{
+    text-align: center;
+    .btn{ width: 90px; padding: 6px; margin-top: 5px}
+    .btn-crop{ margin-top: -5px;}
+}
+.tophome{ background: $blue; color: white; font-size: 1.2em;
+    background: linear-gradient(180deg, $blue 0%, $blue-600 100%);
+
+    .container{border-top: 1px solid $blue-700;
+   background: url("http://laravel.loc/storage/images/layouts/bg-stars-space.png");
+    }
+      img{ height: auto; max-width: 100%}
+        .free{
+            color: $info;
+            font-size: 2.5em; display: inline-block;  text-transform: uppercase; font-weight: bold;
+            span{ color: $danger}
+        }
+     .txt{ flex-grow: 1; margin-bottom: 2em;
+         .h1{ font-weight: bold}
+         .subtitle{font-size: 1.2em;}
+         .desc{ color: lighten($primary,50%);}
+         .btns{ margin: 1em 0;}
+     }
+
+}
+
+.info-blocks{
+    .block{margin-bottom: 1.5rem; text-align: center;background-color: $white; color: white}
+    .icon{ display: flex; align-items: center; justify-content: center}
+    .icon img{
+        width: 45px; margin: 1em 0;
+    }
+    .top-icon{ width: 3em; height: 3em; background-color: $primary; margin: -2.4em auto 1em auto; position: relative; display: flex; align-items: center; justify-content: center;
+        i{ font-size: 2em; color: $white}
+    }
+    b{ display: block; text-align: center; text-transform: uppercase; color: $primary;
+
+    }
+    p{ color: $gray-600; margin: 1em 0 2em 0; min-height: 80px}
+
+}
+
+
+
+.info-blocks-dark{
+    .block{margin-bottom: 1.5rem; text-align: center;background-color: $primary; color: white}
+    .top-icon{ width: 3em; height: 3em; background-color: $primary; margin: -2.4em auto 1em auto; position: relative; display: flex; align-items: center; justify-content: center;
+        i{ font-size: 2em; color: $white}
+    }
+    b{ display: block; text-align: center; text-transform: uppercase; color: $info}
+    p{ color: $gray-400; margin: 1em 0 2em 0; min-height: 80px}
+
+}
+
+.wordgroups{
+    .block:hover .title a{color: $danger}
+    .block{ padding: 0;background: $white; display: flex; flex-direction: column}
+    .img{text-align: center}
+    a{text-decoration: none}
+    .title{ display: flex; align-items: center; justify-content: center; height: 3em; border-color: $gray-300;
+            a{font-size:0.75em; line-height: 1.2em; display: block}
+       }
+    .lang{ text-align: center;position: relative;
+    img{position: absolute; width:3em;top:-2.1em; left: 50%; margin-left: -1.6em; border: 4px solid $white; border-radius: 50%}
+    }
+     .foot{ display: flex; width: 100%; flex-wrap: wrap; align-items: center; justify-content: space-between; padding:5px 10px 10px 10px;
+       & div:first-child{ font-size: 1.3em; font-weight: bold;
+       small{font-weight: normal; display: inline-block;padding-right: 1em;}
+       }
+         & div:last-child{display:flex;flex-grow: 1}
+     }
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.show-only-pagination { overflow-x: auto;
+    p.small.text-muted { display: none;  }
+    .d-sm-none{ display: none!important;}
+    .d-sm-flex{ display: flex!important;}
+}
+.bc{
+    & .col:first-child{ flex-grow: 3; padding-right: 0; font-size: 0.9em; line-height: 1.1em; a{color: $gray-600}}
+    & .col:last-child{  padding-left:0; white-space: nowrap;margin-top: -5px;}
+}
+.pagination{
+    a.page-link{ background: $white}
+
+}
+
+.search_result { margin: 0; padding: 0;
+    width: 100%;
+    background: #FFF;
+    color: #666;
+    border:1px solid #ccc;
+    max-height: 299px;
+    overflow-y: scroll;
+    display: none;
+    position: absolute;
+    z-index: 9;
+
+ li {
+     cursor: pointer;
+     width: 100%;
+     margin: 0;
+     list-style: none;
+     padding: 10px 10px;
+     border-top: 1px #ccc solid;
+     transition: 0.3s;
+ }
+.search_result li:first-child {
+
+    border-top: none;
+
+}
+}
+
+
+.modal-title{ text-transform: uppercase; font-weight: bold}
+.modal-content .container { padding: 0;}
+.sortable{ display: flex;flex-wrap: wrap;}
+.sortable > div{ background: #fff; border: 1px solid #999; padding:0.3rem 0.5rem; margin:0 3px 3px 0; cursor: ew-resize;  text-wrap: nowrap;  }
+.sortable  > div span::after{content: " ";padding:0.3em 0 0 0.2em; display: inline-block; width: 1em; height:1em;cursor: pointer; background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;   }
+
+
+.wordblock{ align-items: start;}
+
+.sentenece{ position: relative;
+    .audio-icon{ margin-top:0;}
+ .num{position: absolute; color: $gray-400; font-size: 14px;right:10px;top:5px;}
+    div{line-height: 1.2em;}
+    .foot-icons{position: absolute; right: 1em; bottom: 10px; color: $gray-400;}
+}
+.search-panel{
+    .long-search{ padding: 10px}
+
+}
+
+.slider__control{ color: $gray-300;
+&.slider__control_show{ display: inline-block; color: $primary;
+    &:hover{ color: $info;}
+  }
+}
+.slider__control_left,.slider__control_right{ font-size:1.4em; top: 50%; transform: translateY(-50%); position: absolute; }
+.slider__control_left{ left:0.5em}
+.slider__control_right{ right:0.5em}
+
+@media (max-width: 768px) {
+    .tophome{ text-align: center;
+    .desc br{ display: none}
+    }
+}
+
+@media (max-width: 558px) {
+    .tophome{  font-size: 1em; }
+    .show-only-pagination {
+        nav.justify-items-center{justify-content: center!important;}
+    }
+
+}
+
+@media (max-width: 428px) {
+    .wordgroups > div{ width: 100%; }
+    .show-only-pagination {
+        & [rel="prev"],[rel="next"] { display: none!important;}
+    }
+}
+
